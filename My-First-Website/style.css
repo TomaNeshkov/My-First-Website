@@ -1,0 +1,59 @@
+main {
+    max-width: 600px; /* limits the maximum width of the main text to 600 pixels, so instead of having one long string of text, a new line of text begins when 600 pixels of text has been reached. */
+}
+
+body {
+    margin: -10px 0 0 0; /* moves the whole page 10 pixels up to adjust the layout. */
+    display: flex; /* enables flexible layout, allowing child elements to respond to resizing. */
+    flex-direction: column; /* arranges child elements in a vertical column. */
+    min-height: 100vh; /* ensures the body takes up at least the full height of the viewport. */
+    padding: 10px; /* adds space inside the body for better content separation from the edges. */
+}
+
+h1 {
+    text-align: center; /* centers the main heading text horizontally. */
+}
+
+.navbar ul {
+    list-style-type: none; /* removes default bullet points from list items, by making the style "none". */
+    background-color: #333; /* sets a dark background color for the navbar. */
+    padding: 0; /* removes default padding from the list. */
+    margin: 0; /* removes default margin from the list. */
+    overflow: hidden; /* prevents the navbar from expanding. */
+}
+
+.navbar a {
+    color: white; /* sets link text color to white. */
+    text-decoration: none; /* removes the underlines from the links. */
+    padding: 15px; /* adds padding around links for better "cilckabillity". */
+    display: block; /* makes the link occupy the entire block. */
+    text-align: center; /* centers the text within the link block. */
+}
+
+.navbar a:hover {
+    background-color: grey; /* changes the background color of the nav bar element to a lighter color, for a smooth effect. */
+}
+
+.navbar li {
+    float: left; /* aligns list items horizontally inside the navbar. */
+}
+
+main {
+    flex: 1; /* allows the main content area to grow and fill available space in the flex container. */
+}
+
+footer {
+    background-color: #333; /* sets a dark background color for the footer. */
+    color: white; /* sets footer text color to white. */
+    padding: 10px; /* adds padding for spacing. */
+    text-align: center; /* centers the footer text horizontally. */
+}
+
+.kittyvideo {
+    width: 100%; /* allows the video to use its full width. */
+    max-width: 640px; /* limits the maximum width of the video to 640. */
+    height: auto; /* maintains the aspect ratio by adjusting height. */
+    aspect-ratio: 16 / 9; /* sets the aspect ratio for the video for a scaling bugfix. */
+    display: block; /* ensures the video is treated as a block element. */
+    margin: auto; /* centers the video horizontally. */
+}
