@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page: Inspirations</title>
+    <link rel="icon" href="t-removebg-preview.png"/>
     <link href="style.css" rel="stylesheet" type="text/css">
 
 </head>
-<body background = "bg1.png">
 
-    <h1>Welcome To My Webpage!</h1>
+<body class="Background" background="bg1.png">
 
-    <nav class = "navbar">
+
+    <h1 class="Title" >Welcome To My Webpage!</h1>
+
+    <nav class="navbar">
         <ul>
-            <li><a href = "mainpage.html">Main page</a></li>
-            <li><a href = "aboutme.html">About me</a></li>
-            <li><a href = "hobbies.html">Hobbies</a></li>
-            <li><a href = "mygoals.html">My goals</a></li>
-            <li><a href = "bonus.html">Bonus</a></li>
+            <audio id="sfx_hover" preload="auto">
+                <source src="sfx/sfx_hover.mp3" type="audio/mpeg">
+            </audio>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="mygoals.html">My projects</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="aboutme.html">About me</a></li>
+            <li><a href="mainpage.html">Main page</a></li>
         </ul>
     </nav>
 
-    <main>
-        <h3>Here are my goals for the future:</h3>
-        <p>I, of course, want to achieve some sort of succesful career. But I don't strive for fame - I genuinely strive for helping people in SOME way. I don't have a figured way of doing it for now, but I think not everyone is given the same chances in life, which is something I'd like to change. Even if it's something little, I still wanna leave the world better than I found it.</p>
+    <script>
+        var sfxOne = document.getElementById("sfx_hover");
+        
+        sfxOne.load();
+        
+        document.querySelectorAll(".navbar a").forEach(function(item) {
+            item.addEventListener("mouseenter", function() {
+                sfxOne.currentTime = 0;
+                sfxOne.play();
+            });
+        });
+    </script>
+
+    <main class = "Textington">
+        <h2>Here is some of my music and inspirations:</h2>
+        <a target = "_blank" href = "https://docs.google.com/document/d/1Z9EYhAu8oQQDXjYjNXWU0XiVb-kc34rMBEn8XaPPSoc/edit">click here!</a>
     </main>
 
 </body>
-<footer>
-    
-    <p>Phone number: <b>+359 89 948 2415</b></p>
-    <p>Email: <b>toma.neshkov.highschool@buditel.bg</b></p>
-    
-    </footer>
+<footer class = "footer">
+
+    <h3><b>© 2008 - 2024 Toma Neshkov</b></h3>
+    <h3><b>All Rights Reserved.</b></h3>
+
+</footer>
+
 </html>

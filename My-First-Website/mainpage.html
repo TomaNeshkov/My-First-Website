@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Page!</title>
-    <link href="style.css" rel="stylesheet" type="text/css">  <!-- we link the .css file to the .html files -->
-
+    <title>Toma N.</title>
+    <link rel="icon" href="t-removebg-preview.png"/>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" />
 </head>
-<body background = "bg1.png">  <!-- we set the background to bg1.png -->
 
-    <h1><b>Welcome To My Webpage!</b></h1>
-
-    <nav class = "navbar">
+<body class="Background" background="bg1.png">
+    <h1 class="Title"><b>Welcome To My Webpage!</b></h1>
+    <nav class="navbar">
         <ul>
-            <li><a href = "mainpage.html">Main page</a></li>
-            <li><a href = "aboutme.html">About me</a></li>
-            <li><a href = "hobbies.html">Hobbies</a></li>   <!-- we add categories for all of the pages in an unorganized list -->
-            <li><a href = "mygoals.html">My goals</a></li>
-            <li><a href = "bonus.html">Bonus</a></li>
+            <audio id="sfx_hover" preload="auto">
+                <source src="sfx/sfx_hover.mp3" type="audio/mpeg">
+            </audio>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="mygoals.html">My projects</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="aboutme.html">About me</a></li>
+            <li><a href="mainpage.html">Main page</a></li>
         </ul>
     </nav>
 
-    <main>
+    <script>
+        var sfxOne = document.getElementById("sfx_hover");
         
-        <h3>Welcome to the home page!</h3>
-        <p>This is the website I made for my school HTML/CSS personal project. It's admittedly humble and basic, but I'm proud of it as my  first ever project using HTML and CSS.
-        </p>
+        sfxOne.load();
+        
+        document.querySelectorAll(".navbar a").forEach(function(item) {
+            item.addEventListener("mouseenter", function() {
+                sfxOne.currentTime = 0;
+                sfxOne.play();
+            });
+        });
+    </script>
+    
 
+    <main class="Textington">
+        <h2>Welcome to the home page!</h2>
+        <p>This is my website-portfolio project homework! Here you will learn about me</p>
     </main>
+
+    <footer class="footer">
+        <h3><b>© 2008 - 2024 Toma Neshkov</b></h3>
+        <h3><b>All Rights Reserved.</b></h3>
+    </footer>
 
 </body>
 
-<footer>
-
-<p>Phone number: <b>+359 89 948 2415</b></p>
-<p>Email: <b>toma.neshkov.highschool@buditel.bg</b></p>
-
-</footer>
 </html>
